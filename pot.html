@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pot Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <button class="back-btn"
+        onclick="location.href='index.html'">
+        ← Back
+    </button>
+
+    <div class="card">
+
+        <h2>Pot Dashboard</h2>
+
+        <div class="stats">
+            P1 Penalty: ₹<span id="p1Penalty">0</span>
+        </div>
+
+        <div class="stats">
+            P2 Penalty: ₹<span id="p2Penalty">0</span>
+        </div>
+
+        <hr style="margin:20px 0">
+
+        <div class="stats">
+            P1 Questions:
+            <span id="p1Questions">0</span>
+        </div>
+
+        <div class="stats">
+            P2 Questions:
+            <span id="p2Questions">0</span>
+        </div>
+
+        <hr style="margin:20px 0">
+
+        <h3>
+            Total Pot:
+            ₹<span id="totalPot">0</span>
+        </h3>
+
+        <br>
+
+        <button
+            class="save-btn"
+            style="background:#dc2626"
+            onclick="clearPot()">
+            CLEAR POT
+        </button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+<script src="js/pot.js"></script>
+
+</body>
+</html>

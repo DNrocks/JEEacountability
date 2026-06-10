@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Entry</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <button class="back-btn"
+        onclick="location.href='index.html'">
+        ← Back
+    </button>
+
+    <div class="card">
+
+        <h2 id="playerName">Player</h2>
+
+        <p id="todayDate"></p>
+
+        <br>
+
+        <label>Goal 1</label>
+        <input type="text" id="goal1">
+
+        <label>Goal 2</label>
+        <input type="text" id="goal2">
+
+        <label>Goal 3</label>
+        <input type="text" id="goal3">
+
+        <label>Questions Solved</label>
+        <input
+            type="number"
+            id="questions"
+            min="0"
+        >
+
+        <label>Status</label>
+
+        <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="YA">YA</option>
+            <option value="NA">NA</option>
+        </select>
+
+        <button
+            class="save-btn"
+            onclick="saveEntry()">
+            Save Entry
+        </button>
+
+        <br><br>
+
+        <p id="message"></p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Previous Entries</h2>
+
+        <div id="history"></div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/player.js"></script>
+
+</body>
+</html>
